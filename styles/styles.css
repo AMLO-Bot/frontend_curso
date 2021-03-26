@@ -1,38 +1,99 @@
-*{
+/* Add media query for 1024px and on modify padding in  */
+/* Normalize styles */
+*,
+*::after,
+*::before {
 	margin:0;
 	box-sizing:border-box;
 	padding:0;
 }
 :root{
 	--bg-color:#AB88FF;
+	--m-fsize: 1.5rem;
+	font-size: 62.5%;
+}
+html{
+	font-family: 'Nunito', sans-serif;
 }
 body{
 	background-color:var(--bg-color);
+	color: white;
 }
-
-header{
+/* Header Styles */
+.header{
 	display:flex;
-	justify-content:space-between;
-	width:100%;
-	heigth: auto;
+	justify-content: space-between;
+	align-items: center;
+	flex-flow: row wrap;
+	width:100vw;
+	height: 100px;
+	padding: 15px;  
 }
 .header__logo{
-	width: 210px;
-	heigth:auto;
-	margin:10px 10px 0px 10px;
+	max-width: 200px;
+  width: 30vw;
+	height: auto;
+	
+}
+.header__menu{
+	display: flex;
+	align-items: stretch;
+	width: fit-content;
+}
+.header__menu img {
+	color: red;
+}
+.header__menu::after{
+	content: "Perfil";
+	display: flex;
+	align-items: center;
+	margin-left: 5px;
+	font-size: var(--m-fsize);
+}
+.header__menu .user-icon{
+	width: 50%;
+	height: auto;
 }
 .header__menu{
 	margin:10px 10px 0px 10px;
 	align-items:center;
 }
-.menu--drop{
-	margin-rigth:10px;
-	list-style:none;
-	text-align:left;
-/* 	display:none; */
+.header__logo,.header__menu *{
+	cursor: pointer;	
 }
-.drop__item{
-	text-decoration:none;
+.header__menu::after:hover{
+	cursor: pointer;
+}
+.header__menu--profile{
+	position: relative;
+}
+/* Menu of profile active in hover*/
+.header__menu--profile ul{
+	/* visibility: hidden; */
+	position: absolute;
+	right: calc(100% - 69px);
+	list-style:none;
+	text-align:center;
+	text-decoration: none;
+}
+.header__menu--profile li{
+	margin-top: 5px;
+}
+.header__menu--profile a{
+	text-decoration: none;
+	color: white;
+	font-size: var(--m-fsize);
+	margin-bottom: 5px;	
+}
+
+
+
+@media (min-width: 1024px) {
+  
+	.header{
+		max-width: 80vw;
+		margin: auto;
+	}
 }
 
 
