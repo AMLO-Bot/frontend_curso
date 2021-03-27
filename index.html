@@ -12,10 +12,11 @@
 <body>
 	<header class="header">
 		<img class="header__logo" src="./assets/logo-platzi-video-BW2.png" alt="Logo Platzi Video">
+
 		<div class="header__menu--profile">
 			<img class="user__icon" src="./assets/user-icon.png" alt="Icono del Usuario">
 			<p>Perfil</p>
-			<ul>
+			<ul class="dropdown">
 				<li><a href="#">Cuenta</a></li>
 				<li><a href="www.youtube.com">Configuración</a></li>
 				<li><a href="#">Cerrar Sesión</a></li>
@@ -23,7 +24,16 @@
 		</div>
 	</header>
 
+
 	<main>
+		<section class="search-wrapper">
+		<div class="search">
+			<h1 class="search__title">¿Qué quieres ver hoy Parse?</h1>
+			<input class="search__bar" type="text" placeholder="Buscar ...">
+		</div>
+		<div class="movies"></div>	
+	</section>
+
 			
 	</main>
 
