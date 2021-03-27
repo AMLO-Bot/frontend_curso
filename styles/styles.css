@@ -6,6 +6,7 @@
 	box-sizing:border-box;
 	padding:0;
 }
+
 :root{
 	--bg-color:#AB88FF;
 	--input-hover:#29274C;
@@ -19,12 +20,12 @@
 
 body{
 	width: 100vw;
-	height: 100vh;
 	font-family: var(--main-font);
-	background: linear-gradient(30deg, rgba(41,39,76,1) 0%, rgba(83,83,181,1) 36%, rgba(171,136,255,1) 100%);
-	background-position: center;
+	/* background: linear-gradient(30deg, rgba(41,39,76,1) 0%, rgba(83,83,181,1) 36%, rgba(171,136,255,1) 100%); */
+	background-color: var(--bg-color);
+	/* background-position: center;
 	background-size: cover;
-	background-repeat: no-repeat;
+	background-repeat: no-repeat; */
 	color: var(--m-fcolor);
 }
 /* Header Styles */
@@ -128,7 +129,70 @@ ul:hover,
 	box-shadow: 13px 15px 21px 14px rgb(41 39 76 / 39%);
 }
 
+/* Carousel covers component */
+.carousel-wrapper{
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: row wrap;
+	width:100vw;
+	height: 40vh;
+	padding: 15px;
+}
+.carousel-wrapper h2{
+	/* justify-content: left; */
+	font-size: 2.0rem;
+}
+.carousel{
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+	height: 40vh;
+	margin-top: 30px;
+	transition: transform 0.5s ease-in-out;
+}
+.carousel .card{
+	width: 20%;
+	margin-right: 1.5rem;
+	border-radius: 20px;
+	box-shadow: 11px 16px 20px 1px rgb(41 39 76 / 39%);
+	background-size: cover;
+	transition: all 0.5s ease-in-out;
+}
+/* Make card standout when hover */
+.carousel .card:hover{
+	transform: scale(1.2, 1.2);
+}
+/* Opaque all card not currently hoverred */
+.carousel:hover .card:not(:hover){
+	opacity: 0.5;
+}
 
+/* Pick which picture is to be displayed */
+.carousel .card:nth-child(1){
+	background-image: url(../assets/card1.jpg);
+}
+.carousel .card:nth-child(2){
+	background-image: url(../assets/card2.jpg);
+}
+.carousel .card:nth-child(3){
+	background-image: url(../assets/card3.jpg);
+}
+.carousel .card:nth-child(4){
+	background-image: url(../assets/card4.jpg);
+}
+.carousel .card:nth-child(5){
+	background-image: url(../assets/card5.jpg);
+}
+.carousel .card:nth-child(6){
+	background-image: url(../assets/card6.jpg);
+}
+.carousel .card:nth-child(7){
+	background-image: url(../assets/card7.jpg);
+}
+.carousel .card:nth-child(8){
+	background-image: url(../assets/card8.jpg);
+}
 
 @media (min-width: 1024px) {
 	.header{
